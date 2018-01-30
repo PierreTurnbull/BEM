@@ -6,10 +6,11 @@ _All examples in this file can be tested on [Codepen](https://codepen.io)_
 
 ## Table of contents
 
-* __BEM__
-* __Burger menu__
-* __GitHub visual network__
-* __Pseudo attributes__
+* [__BEM__](https://github.com/PierreTurnbull/protips#block-element-modifier-bem-convention)
+* [__Burger menu__](https://github.com/PierreTurnbull/protips#burger-menu)
+* [__GitHub visual network__](https://github.com/PierreTurnbull/protips#github-visual-network)
+* [__Pseudo attributes__](https://github.com/PierreTurnbull/protips#pseudo-attributes)
+* [__Units: REM, EM, %, VW / VH__](https://github.com/PierreTurnbull/protips#units-rem-em--vw)
 
 ### Block Element Modifier (BEM) Convention
 
@@ -56,6 +57,55 @@ SCSS:
     &--isActive {
       color: white;
     }
+  }
+}
+```
+
+### Burger menu
+
+A small 25 SCSS lines burger menu that can be adjusted really easily thanks to SCSS's variables and animated properly thank's to it's HTML structure.
+
+HTML:
+
+```HTML
+<div class="burgerMenu">
+  <span class="burgerMenu__rod"></span>
+  <span class="burgerMenu__rod"></span>
+  <span class="burgerMenu__rod"></span>
+</div>
+```
+
+SCSS:
+
+```CSS
+/* BURGER MENU'S WIDTH AND HEIGHT */
+$burgerMenuSize: 50px;
+
+/* BURGER MENU ROD'S SIZE COMPARED TO BURGER MENU'S SIZE */
+$burgerMenuRodRatio: 5;
+
+/* BURGER MENU COLOR */
+$burgerMenuRodColor: #600;
+
+.burgerMenu {
+  position: relative;
+  height: $burgerMenuSize;
+  width: $burgerMenuSize;
+  &__rod {
+    position: absolute;
+    background-color: $burgerMenuRodColor;
+    display: block;
+    width: $burgerMenuSize;
+    height: $burgerMenuSize / $burgerMenuRodRatio;
+  }
+  &__rod:nth-child(1) {
+    top: 0;
+  }
+  &__rod:nth-child(2) {
+    top: $burgerMenuSize / 2 - $burgerMenuSize / $burgerMenuRodRatio / 2;
+  }
+  &__rod:nth-child(3) {
+    bottom: 0;
   }
 }
 ```
@@ -119,56 +169,7 @@ SCSS:
 }
 ```
 
-### Burger menu
-
-A small 25 SCSS lines burger menu that can be adjusted really easily thanks to SCSS's variables and animated properly thank's to it's HTML structure.
-
-HTML:
-
-```HTML
-<div class="burgerMenu">
-  <span class="burgerMenu__rod"></span>
-  <span class="burgerMenu__rod"></span>
-  <span class="burgerMenu__rod"></span>
-</div>
-```
-
-SCSS:
-
-```CSS
-/* BURGER MENU'S WIDTH AND HEIGHT */
-$burgerMenuSize: 50px;
-
-/* BURGER MENU ROD'S SIZE COMPARED TO BURGER MENU'S SIZE */
-$burgerMenuRodRatio: 5;
-
-/* BURGER MENU COLOR */
-$burgerMenuRodColor: #600;
-
-.burgerMenu {
-  position: relative;
-  height: $burgerMenuSize;
-  width: $burgerMenuSize;
-  &__rod {
-    position: absolute;
-    background-color: $burgerMenuRodColor;
-    display: block;
-    width: $burgerMenuSize;
-    height: $burgerMenuSize / $burgerMenuRodRatio;
-  }
-  &__rod:nth-child(1) {
-    top: 0;
-  }
-  &__rod:nth-child(2) {
-    top: $burgerMenuSize / 2 - $burgerMenuSize / $burgerMenuRodRatio / 2;
-  }
-  &__rod:nth-child(3) {
-    bottom: 0;
-  }
-}
-```
-
-### REM, EM, %, VW
+### Units: REM, EM, %, VW / VH
 
 #### REM
 
