@@ -6,9 +6,11 @@
 * E -> Element
 * M -> Modifier
 
-_Code without prefixes_
+_Tout le code ci-présent est exempt de préfixe_
 
-```hmtl
+HTML:
+
+```HTML
 <!-- mainlist = block -->
 <ul class="mainList mainList--xmas">
   <!-- __item = element -->
@@ -27,7 +29,9 @@ _Code without prefixes_
 </ul>
 ```
 
-```css
+SCSS:
+
+```CSS
 .mainList {
   display: flex;
   justify-content: space-between;
@@ -48,7 +52,7 @@ _Code without prefixes_
 
 Exemple en CSS du rendu:
 
-```css
+```CSS
 .mainList {
   display: flex;
   justify-content: space-between;
@@ -76,17 +80,21 @@ Exemple en CSS du rendu:
 Les pseudo attributs `before` et `after` permettent de créer des noeuds HTML en CSS.
 Ils sont essentiellement utilisés pour ajouter des ornements, des décorations...
 On peut bien entendu faire des animations avec, les positionner par rapport à leur parent (relative / absolute).
-**Ils doivent obligatoirement avoir un `content: ''`** afin de s'afficher.
+**Ils doivent obligatoirement avoir la propriété `content: ''`** afin de s'afficher.
 
 Exemple:
 
-```html
+HTML:
+
+```HTML
 <section class="cover">
   <h1 class="cover__mainTitle">Présentation des pseudo-attributs</h1>
 </section>
 ```
 
-```css
+SCSS:
+
+```CSS
 .cover {
   background-color: #F7F7F7;
   padding: 20px;
@@ -112,6 +120,48 @@ Exemple:
     &::after {
       right: 0;
     }
+  }
+}
+```
+
+## Burger menu
+
+HTML:
+
+```HTML
+<div class="burgerMenu">
+  <span class="burgerMenu__rod"></span>
+  <span class="burgerMenu__rod"></span>
+  <span class="burgerMenu__rod"></span>
+</div>
+```
+
+SCSS:
+
+```CSS
+$burgerMenuSize: 50px;
+$burgerMenuRodRatio: 5;
+$burgerMenuRodColor: #600;
+
+.burgerMenu {
+  position: relative;
+  height: $burgerMenuSize;
+  width: $burgerMenuSize;
+  &__rod {
+    position: absolute;
+    background-color: $burgerMenuRodColor;
+    display: block;
+    width: $burgerMenuSize;
+    height: $burgerMenuSize / $burgerMenuRodRatio;
+  }
+  &__rod:nth-child(1) {
+    top: 0;
+  }
+  &__rod:nth-child(2) {
+    top: $burgerMenuSize / 2 - $burgerMenuSize / $burgerMenuRodRatio / 2;
+  }
+  &__rod:nth-child(3) {
+    bottom: 0;
   }
 }
 ```
