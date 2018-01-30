@@ -10,7 +10,7 @@ _All examples in this file can be tested on [Codepen](https://codepen.io)_
 * [__Burger menu__](https://github.com/PierreTurnbull/protips#burger-menu)
 * [__GitHub visual network__](https://github.com/PierreTurnbull/protips#github-visual-network)
 * [__Pseudo attributes__](https://github.com/PierreTurnbull/protips#pseudo-attributes)
-* [__Units: REM, EM, %, VW / VH__](https://github.com/PierreTurnbull/protips#units-rem-em--vw)
+* [__Units: REM, EM, %, VW / VH__](https://github.com/PierreTurnbull/protips#units-rem-em--vw--vh)
 
 ### Block Element Modifier (BEM) Convention
 
