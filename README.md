@@ -1,12 +1,18 @@
-# Documentation
+# Protips
 
-## Convention BEM
+_No prefix is used in the code below_
+
+## Table of contents
+
+* __BEM__
+* __Burger menu__
+* __Pseudo attributes__
+
+### Convention BEM
 
 * B -> Block
 * E -> Element
 * M -> Modifier
-
-_Tout le code ci-présent est exempt de préfixe_
 
 HTML:
 
@@ -50,7 +56,7 @@ SCSS:
 }
 ```
 
-Exemple en CSS du rendu:
+CSS result:
 
 ```CSS
 .mainList {
@@ -75,20 +81,20 @@ Exemple en CSS du rendu:
 }
 ```
 
-## Pseudo attributs
+### Pseudo attributes
 
-Les pseudo attributs `before` et `after` permettent de créer des noeuds HTML en CSS.
-Ils sont essentiellement utilisés pour ajouter des ornements, des décorations...
-On peut bien entendu faire des animations avec, les positionner par rapport à leur parent (relative / absolute).
-**Ils doivent obligatoirement avoir la propriété `content: ''`** afin de s'afficher.
+Pseudo attributes `before` and `after` enable the creation of HTML nodes in CSS.
+They are mostly used to flourish and decorate the DOM _(Document Object Model)_.
+It is possible to create animations and to position them compared to their parents _(relative / absolute)_.
+**They have to possess the property `content: ''` in order to display.**
 
-Exemple:
+Example:
 
 HTML:
 
 ```HTML
 <section class="cover">
-  <h1 class="cover__mainTitle">Présentation des pseudo-attributs</h1>
+  <h1 class="cover__mainTitle">Pseudo attribute presentation</h1>
 </section>
 ```
 
@@ -124,7 +130,9 @@ SCSS:
 }
 ```
 
-## Burger menu
+### Burger menu
+
+A small 25 SCSS lines burger menu that can be adjusted really easily thank's to SCSS's variables and animated properly thank's to it's HTML structure.
 
 HTML:
 
@@ -139,8 +147,13 @@ HTML:
 SCSS:
 
 ```CSS
+/* BURGER MENU'S WIDTH AND HEIGHT */
 $burgerMenuSize: 50px;
+
+/* BURGER MENU ROD'S SIZE COMPARED TO BURGER MENU'S SIZE */
 $burgerMenuRodRatio: 5;
+
+/* BURGER MENU COLOR */
 $burgerMenuRodColor: #600;
 
 .burgerMenu {
@@ -165,3 +178,55 @@ $burgerMenuRodColor: #600;
   }
 }
 ```
+
+### REM, EM, %, VW
+
+#### REM
+
+* REM is based on the root's font-size, `<html>`, which by default is 16 pixels. In order to make things easier _(less calculations)_, `<html>` font size value should be set to 10%, or 62.5%.
+* REM is an interesting tool to get propotional values when resizing the page.
+* REM proportions are kept the same when a user zooms in the page.
+
+```CSS
+html {
+  font-size: 62.5%;
+}
+```
+
+#### EM
+
+* EM is a value relative to the font-size of the direct parent.
+
+SCSS:
+
+```CSS
+.cover {
+  font-size: 20px;
+  &__mainTitle {
+    /* 1em = 20px / 0.8em < 20px */
+    font-size: 0.8em;
+  }
+}
+```
+
+#### %
+
+* Percentage is a value relative to the corresponding value of the direct parent.
+
+SCSS:
+
+```CSS
+.cover {
+  width: 500px;
+  &__mainTitle {
+    /* 50% of 500px is 250px */
+    width: 50%;
+  }
+}
+```
+
+#### VW / VH
+
+* vw and vh are screen size based values. 1vh is 1% of the screen height.
+* Be careful with vh and its content. 100vh = 100% of the screen height, whatever happens _(even when flipping a phone)_.
+* vw is very usefull for fluid interfaces (which is different of responsive).
