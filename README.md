@@ -1,18 +1,22 @@
 # Protips
 
-_No prefix is used in the code below_
+_No prefix is used in the code below._
+
+_All examples in this file can be tested on [Codepen](https://codepen.io)_
 
 ## Table of contents
 
 * __BEM__
 * __Burger menu__
+* __GitHub visual network__
 * __Pseudo attributes__
 
-### Convention BEM
+### Block Element Modifier (BEM) Convention
 
-* B -> Block
-* E -> Element
-* M -> Modifier
+BEM is a convention that intends to make CSS writing more universal. It is a way of naming variables _(even though it's always up to you to decide how you should name your variables and selectors)_.
+To learn about it, [click here](http://getbem.com/introduction/)
+
+Below is an example of BEM named selectors with SCSS.
 
 HTML:
 
@@ -56,29 +60,14 @@ SCSS:
 }
 ```
 
-CSS result:
+### GitHub visual network
 
-```CSS
-.mainList {
-  display: flex;
-  justify-content: space-between;
-}
+It used to frustrate me when, after pushing my work on the remote repository, the visual network tool _(insight > network)_ seemed to get rid of all the branches I used before merging my work into my master branch. When I pushed, only the master branch was visible. I discovered that this is due to the __fast forwarding__, a functionality of Git that is enabled by default when merging a branch with `git merge branch`. Basically, when merging a branch into another from a CLI _(Command Line Interpreter)_, the fast forward functionality makes that all the underlying branch's commits are merged into one big commit.
 
-.mainList--xmas {
-  background: green;
-}
+If you want all your commits to be saved and visible on the visual network tool of GitHub, simply add `--no-ff` when merging in order to disable the fast forwarding:
 
-.mainList__item {
-  list-style: none;
-}
-
-.mainList__itemLink {
-  color: red;
-}
-
-.mainList__itemLink--isActive {
-  color: white;
-}
+```
+git merge --no-ff branch_to_be_merged
 ```
 
 ### Pseudo attributes
@@ -132,7 +121,7 @@ SCSS:
 
 ### Burger menu
 
-A small 25 SCSS lines burger menu that can be adjusted really easily thank's to SCSS's variables and animated properly thank's to it's HTML structure.
+A small 25 SCSS lines burger menu that can be adjusted really easily thanks to SCSS's variables and animated properly thank's to it's HTML structure.
 
 HTML:
 
