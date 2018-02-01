@@ -2,12 +2,11 @@
 
 _No prefix is used in the code below._
 
-_All examples in this file can be tested on [Codepen](https://codepen.io)_
-
 ## Table of contents
 
 * [__BEM__](https://github.com/PierreTurnbull/protips#block-element-modifier-bem-convention)
 * [__Burger menu__](https://github.com/PierreTurnbull/protips#burger-menu)
+* [__Flexbox Grid__](https://github.com/PierreTurnbull/protips#flexbox-grid)
 * [__GitHub visual network__](https://github.com/PierreTurnbull/protips#github-visual-network)
 * [__Pseudo attributes__](https://github.com/PierreTurnbull/protips#pseudo-attributes)
 * [__Units: REM, EM, %, VW / VH__](https://github.com/PierreTurnbull/protips#units-rem-em--vw--vh)
@@ -108,6 +107,72 @@ $burgerMenuRodColor: #600;
     bottom: 0;
   }
 }
+```
+
+### Flexbox Grid
+
+In our numerical devices, every website should be responsive, because it can be accessed from many different devices with unique screen dimensions. A non-responsive website is a bad website.
+
+An awesome tool to make responsive easily and fast is css grids. The one I use is based on Flexbox. It is called [Flexbox Grid](http://flexboxgrid.com/). Instead of spending a lot of time on CSS, just use already existing classes to format your document.
+
+- It is fully responsive and you can make it fluid too
+- It is made for mobile-first projects
+- It uses a 12 columns grid.
+
+HTML:
+
+```HTML
+<div class="container">
+  <div class="row">
+    <div class="block1 col-xs-6">
+      1
+    </div>
+    <div class="block2 col-xs-6">
+      2
+    </div>
+    <div class="block3 col-xs-4">
+      3
+    </div>
+    <div class="block4 col-xs-4">
+      4
+    </div>
+    <div class="block5 col-xs-4">
+      5
+    </div>
+    <div class="block6 col-xs-6 col-xs-offset-6">
+      6
+    </div>
+  </div>
+</div>
+```
+
+CSS:
+
+```CSS
+.container {
+  margin: 0 auto;
+}
+
+.block1 {
+  background: #200;
+}
+
+.block2 {
+  background: #400;
+}
+
+.block3 {
+  background: #800;
+}
+
+.block4 {
+  background: #C00;
+}
+
+.block5 {
+  background: #F00;
+}
+
 ```
 
 ### GitHub visual network
