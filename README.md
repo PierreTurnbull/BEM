@@ -62,7 +62,7 @@ SCSS:
 
 ### Burger menu
 
-A small 25 SCSS lines burger menu that can be adjusted really easily thanks to SCSS's variables and animated properly thank's to it's HTML structure.
+A small 25 SCSS lines burger menu that can be adjusted really easily thanks to SCSS's variables and animated properly thanks to its HTML structure.
 
 HTML:
 
@@ -108,6 +108,8 @@ $burgerMenuRodColor: #600;
   }
 }
 ```
+
+Try this on [Codepen](https://codepen.io/nounoursnoir/pen/mXyWzo)!
 
 ### Flexbox Grid
 
@@ -190,7 +192,7 @@ git merge --no-ff branch_to_be_merged
 Pseudo attributes `before` and `after` enable the creation of HTML nodes in CSS.
 They are mostly used to flourish and decorate the DOM _(Document Object Model)_.
 It is possible to create animations and to position them compared to their parents _(relative / absolute)_.
-**They have to possess the property `content: ''` in order to display.**
+**They need to possess the property `content: ''` in order to be visible.**
 
 Example:
 
@@ -238,8 +240,8 @@ SCSS:
 
 #### REM
 
-* REM is based on the root's font-size, `<html>`, which by default is 16 pixels. In order to make things easier _(less calculations)_, `<html>` font size value should be set to 10%, or 62.5%.
-* REM is an interesting tool to get propotional values when resizing the page.
+* REM is based on the root's font-size, `<html>`, which by default is 16 pixels. In order to make things easier _(less calculations)_, `<html>` font size value should be set to 10px, or 62.5%.
+* REM is an interesting tool to get propotional values when resizing a page.
 * REM proportions are kept the same when a user zooms in the page.
 
 ```CSS
@@ -258,7 +260,7 @@ SCSS:
 .cover {
   font-size: 20px;
   &__mainTitle {
-    /* 1em = 20px / 0.8em < 20px */
+    /* 1em = 20px, 0.8em = 16px */
     font-size: 0.8em;
   }
 }
@@ -282,6 +284,6 @@ SCSS:
 
 #### VW / VH
 
-* vw and vh are screen size based values. 1vh is 1% of the screen height.
+* vw and vh are screen size based values. 1vh is 1% of the screen height. 1vw is 1% of the screen width.
 * Be careful with vh and its content. 100vh = 100% of the screen height, whatever happens _(even when flipping a phone)_.
-* vw is very usefull for fluid interfaces (which is different of responsive).
+* vw is very useful for fluid interfaces.
