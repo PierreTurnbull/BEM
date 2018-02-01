@@ -111,11 +111,11 @@ $burgerMenuRodColor: #600;
 
 ### Flexbox Grid
 
-In our numerical devices, every website should be responsive, because it can be accessed from many different devices with unique screen dimensions. A non-responsive website is a bad website.
+In our numerical era, every website should be responsive, because it can be accessed from many different devices with unique screen dimensions. A non-responsive website is a bad thing.
 
-An awesome tool to make responsive easily and fast is css grids. The one I use is based on Flexbox. It is called [Flexbox Grid](http://flexboxgrid.com/). Instead of spending a lot of time on CSS, just use already existing classes to format your document.
+An awesome tool to make responsive websites easily and fast is css grids. The one I use is based on Flexbox. It is called [Flexbox Grid](http://flexboxgrid.com/). Instead of spending a lot of time on CSS, just use already existing classes to format your document.
 
-- It is fully responsive and you can make it fluid too
+- You can make your code fully responsive and fluid
 - It is made for mobile-first projects
 - It uses a 12 columns grid.
 
