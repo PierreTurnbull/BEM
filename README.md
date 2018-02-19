@@ -236,6 +236,14 @@ SCSS:
 }
 ```
 
+### CSS trapezoid shapes
+
+A very useful trick I learned when I tried to create trapezoid shapes in CSS was to use borders.
+
+To understand it quickly, a [simple example](https://codepen.io/nounoursnoir/pen/VQQqqJ) is worth it.
+
+On the first shape, you can see a behaviour that makes one corner stretch in order to reach the neighbor border. It's all about playing with this behaviour. Again, some examples _(see the other shapes)_ are worth more than words. CSS is alchemy: play with properties, and you'll find interesting things.
+
 ### Units: REM, EM, %, VW / VH
 
 #### REM
