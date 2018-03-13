@@ -11,6 +11,7 @@ _No prefix is used in the code below._
 * [__Pseudo attributes__](https://github.com/PierreTurnbull/protips#pseudo-attributes)
 * [__CSS trapezoid shapes__](https://github.com/PierreTurnbull/protips#css-trapezoid-shapes)
 * [__Units: REM, EM, %, VW / VH__](https://github.com/PierreTurnbull/protips#units-rem-em--vw--vh)
+* [__Useful links__](https://github.com/PierreTurnbull/protips#useful-links)
 
 ### Block Element Modifier (BEM) Convention
 
@@ -296,3 +297,8 @@ SCSS:
 * vw and vh are screen size based values. 1vh is 1% of the screen height. 1vw is 1% of the screen width.
 * Be careful with vh and its content. 100vh = 100% of the screen height, whatever happens _(even when flipping a phone)_.
 * vw is very useful for fluid interfaces.
+
+### Useful links
+
+[Front end developer interview questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
+[css next](http://cssnext.io/)
