@@ -9,6 +9,7 @@ _No prefix is used in the code below._
 * [__Flexbox Grid__](https://github.com/PierreTurnbull/protips#flexbox-grid)
 * [__GitHub visual network__](https://github.com/PierreTurnbull/protips#github-visual-network)
 * [__Pseudo attributes__](https://github.com/PierreTurnbull/protips#pseudo-attributes)
+* [__CSS trapezoid shapes__](https://github.com/PierreTurnbull/protips#css-trapezoid-shapes)
 * [__Units: REM, EM, %, VW / VH__](https://github.com/PierreTurnbull/protips#units-rem-em--vw--vh)
 
 ### Block Element Modifier (BEM) Convention
